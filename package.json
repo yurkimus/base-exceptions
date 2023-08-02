@@ -1,0 +1,31 @@
+{
+  "type": "module",
+  "name": "base-exceptions",
+  "version": "0.0.0",
+  "description": "Simple components to work with errors in javascript",
+  "main": "destination/index.js",
+  "types": "destination/index.d.ts",
+  "scripts": {
+    "compile": "tsc"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "exceptions",
+    "errors",
+    "base-fetch"
+  ],
+  "author": "Iurii Ignatov <yurkimus@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yurkimus/base-exceptions.git"
+  },
+  "devDependencies": {
+    "@types/ramda": "^0.29.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "ramda": "^0.29.0"
+  }
+}
