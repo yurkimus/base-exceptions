@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "base-exceptions",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Simple components to work with errors in javascript",
   "main": "destination/index.js",
   "types": "destination/index.d.ts",
