@@ -1,6 +1,6 @@
 export abstract class Exception extends Error {
   constructor(
-    public code: number,
+    public code: string,
     public name: string,
     public message: string
   ) {
@@ -17,8 +17,8 @@ export class NetworkException extends Exception {
     throw new NetworkException(...args)
   }
 
-  constructor(public message = '') {
-    super(0x0, 'NetworkException', message)
+  constructor(public message = 'NetworkException') {
+    super('NETWORK_EXCEPTION', 'NetworkException', message)
   }
 }
 
@@ -31,8 +31,8 @@ export class ApiException extends Exception {
     throw new ApiException(...args)
   }
 
-  constructor(public message = '') {
-    super(0x1, 'ApiException', message)
+  constructor(public message = 'ApiException') {
+    super('API_EXCEPTION', 'ApiException', message)
   }
 }
 
@@ -45,8 +45,8 @@ export class BusinessException extends Exception {
     throw new BusinessException(...args)
   }
 
-  constructor(public message = '') {
-    super(0x2, 'BusinessException', message)
+  constructor(public message = 'BusinessException') {
+    super('BUSINESS_EXCEPTION', 'BusinessException', message)
   }
 }
 
@@ -59,7 +59,7 @@ export class UnhandledException extends Exception {
     throw new BusinessException(...args)
   }
 
-  constructor(public message = '') {
-    super(0x3, 'UnhandledException', message)
+  constructor(public message = 'UnhandledException') {
+    super('UNHANDLED_EXCEPTION', 'UnhandledException', message)
   }
 }
